@@ -8,9 +8,9 @@ jobs:
     steps:
       - name: Slash Command Dispatch
         id: scd
-        token: ${{ secrets.GITHUB_TOKEN }}
         uses: peter-evans/slash-command-dispatch@v2
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           commands: |
             deploy
           static-args: |
